@@ -12,7 +12,7 @@ import javax.swing.JButton;
 import org.codehaus.groovy.tools.shell.Command;
 /**
 *
-* @author f212
+* @author f
 */
 public class BubbleClass extends Observable implements ActionListenerCommand {
 public int x[];
