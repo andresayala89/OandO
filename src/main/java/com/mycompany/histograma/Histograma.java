@@ -35,9 +35,9 @@ static ActionListenerCommand shell;
 static ActionListenerCommand Sort;
 public Histograma(Conjunto c) {
 this.c=c;
-this.setSize(new Dimension(600,600));
-this.setMinimumSize(new Dimension(600,600));
-this.setPreferredSize(new Dimension(600,600));
+this.setSize(new Dimension(300,800));
+this.setMinimumSize(new Dimension(300,500));
+this.setPreferredSize(new Dimension(300,500));
 }
 @Override
 protected void paintComponent(Graphics g) {
@@ -64,21 +64,21 @@ this.updateUI();
 public static void main(String[] args) {
 final JFrame f=new JFrame("Histograma");
 int intQuantity = 0;
-Object result = JOptionPane.showInputDialog(frame, "Ingrese la cantidad de números:");
+Object result = JOptionPane.showInputDialog(frame, "Cantidad de numeros:");
 intQuantity =Integer.parseInt(result.toString());
 final Conjunto c=new Conjunto(intQuantity);
 Histograma h=new Histograma(c);
 c.addObserver(h);
 f.getContentPane().add(h);
 JPanel contentCenter = new JPanel(new GridBagLayout());
-JButton button1 = new JButton ("Organizar por burbuja");
-JButton button2 = new JButton ("Organizar por QuickSort");
-JButton button3 = new JButton ("Organizar por ShellSort");
+JButton button1 = new JButton ("Ordenar por el metodo Burbuja");
+JButton button2 = new JButton ("Ordenar por el metodo QuickSort");
+JButton button3 = new JButton ("Ordenar por el metodo ShellSort");
 //Command Class
 bubble = new BubbleClass(c.getX());
 shell = new ShellClass(c.getX());
 Sort = new SortClass(c.getX());
-f.add(contentCenter,BorderLayout.SOUTH);
+f.add(contentCenter,BorderLayout.NORTH);
 contentCenter.add(button1);
 contentCenter.add(button2);
 contentCenter.add(button3);
