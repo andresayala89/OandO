@@ -54,7 +54,7 @@ g.drawLine(xi,10, xi,10+y);
 xi+=5;
 i++;
 g.setColor(Color.BLACK);
-g.drawString(Arrays.toString(c.getX()), 50, 350);
+g.drawString(Arrays.toString(c.getX()), 500, 350);
 }
 }
 @Override
@@ -74,6 +74,7 @@ JPanel contentCenter = new JPanel(new GridBagLayout());
 JButton button1 = new JButton ("Ordenar por el metodo Burbuja");
 JButton button2 = new JButton ("Ordenar por el metodo QuickSort");
 JButton button3 = new JButton ("Ordenar por el metodo ShellSort");
+
 //Command Class
 bubble = new BubbleClass(c.getX());
 shell = new ShellClass(c.getX());
@@ -82,6 +83,7 @@ f.add(contentCenter,BorderLayout.NORTH);
 contentCenter.add(button1);
 contentCenter.add(button2);
 contentCenter.add(button3);
+
 f.pack();
 f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 final Thread t=new Thread(new Runnable() {
